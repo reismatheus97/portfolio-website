@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  	<title>Matheus Reis Portfolio</title>
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+	
+    <style type="text/css">
+    	body {
+		  display: flex;
+		  height: 100vh;
+		}
+
+		h1, h2, h3, h4, h5, h6, .app-title, .app-content {
+		  font-family: Roboto !important;
+		  font-weight: 300 !important;
+		}
+
+		.mdc-drawer-app-content {
+		  flex: auto;
+		  overflow: auto;
+		}
+
+		.main-content {
+		  overflow: auto;
+		  height: 100%;
+		}
+
+		.app-bar {
+		  position: absolute;
+		}
+
+		.icon-custom {
+			width: 48px;
+			height: 48px;
+		}
+
+		.icons-container {
+			display: flex;
+    		justify-content: space-evenly;
+    		margin: 8% 0;
+		}
+
+		.mdc-drawer__content {
+			overflow: hidden;
+		}
+
+		.mdc-list {
+			height: 100%;
+		}
+
+		.mdc-layout-grid {
+			padding: 0;
+		}
+
+    </style>
+
+  </head>
+  <body>
+  	<aside class="mdc-drawer">
+	  <div class="mdc-drawer__header">
+	    <h3 class="mdc-drawer__title">Matheus Reis</h3>
+	    <h6 class="mdc-drawer__subtitle">Full Stack Developer</h6>
+	  </div>
+	  <div class="mdc-drawer__content">
+	    <nav class="mdc-list">
+	      <a class="mdc-list-item mdc-list-item--activated" href="#" aria-selected="true">
+	        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">home</i>
+	        <span class="mdc-list-item__text">Home</span>
+	      </a>
+	      <a class="mdc-list-item" href="#">
+	        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">account_box</i>
+	        <span class="mdc-list-item__text">About</span>
+	      </a>
+	     
+	      
+	    </nav>
+	  </div>
+	  <section class="icons-container">
+	  	<img src="img/linkedin_circle.png" class="icon-custom" alt="LinkedIn">
+	  	<img src="img/github_circle.png" class="icon-custom" alt="LinkedIn">	
+	  </section>
+	</aside>
+
+	<div class="container">
+		<div class="mdc-layout-grid">
+		  <div class="mdc-layout-grid__inner">
+		    <div class="mdc-layout-grid__cell">
+		    	 <p class="mdc-drawer__title">Title</p>
+		    </div>
+		  </div>
+		  <div class="mdc-layout-grid__inner">
+		    <div class="mdc-layout-grid__cell">
+		    	 <p class="app-content">Content</p>
+		    </div>
+		  </div>
+		</div>
+	</div>
+    <script type="text/javascript">
+
+    	selectFunc = (toSelectItem) => {
+    		let items = Array.from(document.getElementsByClassName("mdc-list-item"));
+    		items.map(it => it.classList.remove("mdc-list-item--activated"));
+
+    		toSelectItem.target.classList.add("mdc-list-item--activated");
+    	}
+    	
+    	let list = Array.from(document.getElementsByClassName("mdc-list-item"));
+    	list.map(it => it.addEventListener("click", selectFunc))
+
+    </script>
+
+  </body>
+</html>
