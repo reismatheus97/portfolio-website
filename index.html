@@ -1,51 +1,70 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  	<title>Matheus Reis Portfolio</title>
-  	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-	
-    <style type="text/css">
-    	body {
-		  display: flex;
-		  height: 100vh;
+	<title>Matheus Reis Portfolio</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" type="text/css">
+	<link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+
+	<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+
+	<style type="text/css">
+		body {
+			display: flex;
+			height: 100vh;
+			font-family: Roboto !important;
+			margin: 0;
+		}
+		
+		p {
+    	box-sizing: border-box;
+			padding: 20px;
 		}
 
-		h1, h2, h3, h4, h5, h6, .app-title, .app-content {
-		  font-family: Roboto !important;
-		  font-weight: 300 !important;
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		.app-title,
+		.app-content {
+			font-family: Roboto !important;
+			font-weight: 300 !important;
+		}
+
+		.mdc-drawer {
+			position: fixed;
 		}
 
 		.mdc-drawer-app-content {
-		  flex: auto;
-		  overflow: auto;
+			flex: auto;
+			overflow: auto;
 		}
 
 		.main-content {
-		  overflow: auto;
-		  height: 100%;
+			overflow: auto;
+			height: 100%;
 		}
 
 		.app-bar {
-		  position: absolute;
+			position: absolute;
 		}
 
-		.icon-custom {
+		.img-icon-custom {
 			width: 48px;
 			height: 48px;
 		}
 
 		.icons-container {
 			display: flex;
-    		justify-content: space-evenly;
-    		margin: 8% 0;
+			justify-content: space-evenly;
+			margin: 10% 0;
 		}
 
 		.mdc-drawer__content {
@@ -60,62 +79,248 @@
 			padding: 0;
 		}
 
-    </style>
+		.custom-icon:hover {
+			opacity: 0.4;
+		}
 
-  </head>
-  <body>
-  	<aside class="mdc-drawer">
-	  <div class="mdc-drawer__header">
-	    <h3 class="mdc-drawer__title">Matheus Reis</h3>
-	    <h6 class="mdc-drawer__subtitle">Full Stack Developer</h6>
-	  </div>
-	  <div class="mdc-drawer__content">
-	    <nav class="mdc-list">
-	      <a class="mdc-list-item mdc-list-item--activated" href="#" aria-selected="true">
-	        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">home</i>
-	        <span class="mdc-list-item__text">Home</span>
-	      </a>
-	      <a class="mdc-list-item" href="#">
-	        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">account_box</i>
-	        <span class="mdc-list-item__text">About</span>
-	      </a>
-	     
-	      
-	    </nav>
-	  </div>
-	  <section class="icons-container">
-	  	<img src="img/linkedin_circle.png" class="icon-custom" alt="LinkedIn">
-	  	<img src="img/github_circle.png" class="icon-custom" alt="LinkedIn">	
-	  </section>
+		.container {
+			width: 100%
+		}
+
+		.mdc-top-app-bar {
+			position: relative;
+		}
+
+		.mdc-layout-grid__cell {
+			text-align: center;
+		}
+
+		.mdc-layout-grid__inner {
+			padding: 10px 20px;
+		}
+
+		.mdc-card__actions {
+			justify-content: center;
+		}
+		
+		.mdc-card__media {
+			max-height: 320px;
+		}
+
+		.mdc-card__media-content {
+			padding: 5px;
+		}
+
+		.my-card {
+			height: auto;
+    	width: 100%;
+		}
+
+		.my-card-img {
+			width: 100%;
+			height: 100%;
+			max-width: 300px;
+			max-height: 300px;
+		}
+
+		.inner-drawer-icon {
+			vertical-align: text-top;
+		}
+
+		.float-left {
+			float: left;
+		}
+
+		.float-right {
+			float: right;
+		}
+
+		.img-logo {
+			text-align: center;
+			width: 110px;
+		}
+
+		.img-container {
+			width: 100%;
+			text-align: center;
+		}
+
+		.inner-drawer-icon {
+				display: inline-block;
+		}
+
+		@media screen and (min-width: 800px) {
+
+			.mdc-drawer {
+				display: flex !important;
+				position: fixed;
+			}
+
+		}
+
+		@media screen and (max-width: 799px) {
+			.mdc-drawer {
+				display: none !important;
+				position: fixed;
+			}
+		}
+	</style>
+
+</head>
+
+<body>
+	<aside class="mdc-drawer">
+		<div class="mdc-drawer__header">
+			<div class="float-left">
+				<h3 class="mdc-drawer__title">Matheus Reis</h3>
+				<h6 class="mdc-drawer__subtitle">Full Stack Developer</h6>
+			</div>
+			<div class="float-right">
+				<div class="mdc-drawer__title">
+					<button id="navigation-icon-close" class="mdc-icon-button material-icons inner-drawer-icon">
+						arrow_left
+					</button>
+				</div>
+			</div>
+			
+		</div>
+		<div class="mdc-drawer__content">
+			<nav class="mdc-list">
+				<a class="mdc-list-item mdc-list-item--activated" href="#" aria-selected="true">
+					<i class="material-icons mdc-list-item__graphic" aria-hidden="true">home</i>
+					<span class="mdc-list-item__text">Home</span>
+				</a>
+				<a class="mdc-list-item" href="#/about">
+					<i class="material-icons mdc-list-item__graphic" aria-hidden="true">account_box</i>
+					<span class="mdc-list-item__text">About</span>
+				</a>
+			</nav>
+		</div>
+		<div class="img-container">
+			<img src="img/logo.png" class="img-logo" alt="LinkedIn">
+			<br>
+			<p>reismatheus97</p>
+		</div>
+		<section class="icons-container">
+			<a class="custom-icon" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/reismatheus97">
+				<img src="img/linkedin_circle.png" class="img-icon-custom" alt="LinkedIn">
+			</a>
+			<a class="custom-icon" target="_blank" rel="noopener noreferrer" href="https://github.com/reismatheus97">
+				<img src="img/github_circle.png" class="img-icon-custom" alt="GitHub">
+			</a>
+		</section>
 	</aside>
 
 	<div class="container">
+		<header class="mdc-top-app-bar ">
+				<div class="mdc-top-app-bar__row">
+					<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+						<a href="#" class="material-icons mdc-top-app-bar__navigation-icon" id="navigation-icon">
+								menu
+						</a>
+						<span class="mdc-top-app-bar__title">Home</span>
+						
+					</section>
+				</div>
+		</header>
 		<div class="mdc-layout-grid">
-		  <div class="mdc-layout-grid__inner">
-		    <div class="mdc-layout-grid__cell">
-		    	 <p class="mdc-drawer__title">Title</p>
-		    </div>
-		  </div>
-		  <div class="mdc-layout-grid__inner">
-		    <div class="mdc-layout-grid__cell">
-		    	 <p class="app-content">Content</p>
-		    </div>
-		  </div>
+			<div class="mdc-layout-grid__inner">
+					<div class="mdc-layout-grid__cell">
+							<div class="mdc-card my-card">
+								<div class="mdc-card__media mdc-card__media--square">
+									<div class="mdc-card__media-content">
+										<img class="my-card-img" src="img/icon-html.png" alt="HTML5">
+									</div>
+								</div>
+								<p>HTML Content</p>
+							</div>
+					</div>
+					<div class="mdc-layout-grid__cell">
+							<div class="mdc-card my-card">
+								<div class="mdc-card__media mdc-card__media--square">
+									<div class="mdc-card__media-content">
+										<img class="my-card-img" src="img/icon-css.png" alt="CSS">
+									</div>
+								</div>
+								<p>CSS Content</p>
+							</div>
+					</div>
+					<div class="mdc-layout-grid__cell">
+							<div class="mdc-card my-card">
+									<div class="mdc-card__media mdc-card__media--square">
+										<div class="mdc-card__media-content">
+											<img class="my-card-img" src="img/icon-js.png" alt="JavaScript">
+										</div>
+									</div>
+									<p>JS Content</p>
+								</div>
+					</div>
+					<div class="mdc-layout-grid__cell">
+							<div class="mdc-card my-card">
+								<div class="mdc-card__media mdc-card__media--square">
+									<div class="mdc-card__media-content">
+										<img class="my-card-img" src="img/icon-java.png" alt="Java">
+									</div>
+								</div>
+								<p>Java Content</p>
+							</div>
+					</div>
+					<div class="mdc-layout-grid__cell">
+							<div class="mdc-card my-card">
+								<div class="mdc-card__media mdc-card__media--square">
+									<div class="mdc-card__media-content">
+										<img class="my-card-img" src="img/icon-py.png" alt="Python">
+									</div>
+								</div>
+								<p>Python</p>
+							</div>
+					</div>
+					<div class="mdc-layout-grid__cell">
+							<div class="mdc-card my-card">
+								<div class="mdc-card__media mdc-card__media--square">
+									<div class="mdc-card__media-content">
+										<img class="my-card-img" src="img/icon-db.png" alt="Database">
+									</div>
+								</div>
+								<p>Database</p>
+							</div>
+					</div>
+			</div>
 		</div>
 	</div>
-    <script type="text/javascript">
 
-    	selectFunc = (toSelectItem) => {
-    		let items = Array.from(document.getElementsByClassName("mdc-list-item"));
-    		items.map(it => it.classList.remove("mdc-list-item--activated"));
+	<script type="text/javascript">
 
-    		toSelectItem.target.classList.add("mdc-list-item--activated");
-    	}
-    	
-    	let list = Array.from(document.getElementsByClassName("mdc-list-item"));
-    	list.map(it => it.addEventListener("click", selectFunc))
+		// Deactivate all list items and activate the clicked item.
+		selectFunc = (toSelectItem) => {
+			let items = Array.from(document.getElementsByClassName("mdc-list-item"));
+			items.map(it => it.classList.remove("mdc-list-item--activated"));
 
-    </script>
+			toSelectItem.target.classList.add("mdc-list-item--activated");
+		}
 
-  </body>
+		// Control the selection of a route at the sidebar.
+		let list = Array.from(document.getElementsByClassName("mdc-list-item"));
+		list.map(it => it.addEventListener("click", selectFunc))
+
+		// Change drawer's visibility.
+		changeDrawerVisibility = () => {
+			const drawerStyleDisplay = getComputedStyle(document.getElementsByClassName("mdc-drawer")[0], null).display
+			let drawer = document.getElementsByClassName("mdc-drawer")[0];
+
+			drawerStyleDisplay === "none" ?
+				drawer.style.setProperty("display", "flex", "important") :
+				drawer.style.setProperty("display", "none", "important")
+
+		}
+
+		// Add opening event to the drawer.
+		document.getElementById("navigation-icon").addEventListener("click", changeDrawerVisibility);
+
+		// Add closing event to the drawer.
+	  document.getElementById("navigation-icon-close").addEventListener("click", changeDrawerVisibility);
+
+	</script>
+</body>
+
 </html>
