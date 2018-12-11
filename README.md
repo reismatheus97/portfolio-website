@@ -7,4 +7,5 @@ Any web browser like Google Chrome, Firefox, IE, Opera... \
 Internet conection.
 
 # Used content
+It was used only HTML, CSS and JavaScript.
 Material Design UI: https://material.io
