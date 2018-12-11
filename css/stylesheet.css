@@ -4,7 +4,7 @@
 @media screen and (min-width: 840px) {
     .mdc-layout-grid {
         padding: 0;
-        margin: 0 120px;
+        margin: 0 120px 50px 120px;
     }
 
     h1 {
@@ -20,7 +20,7 @@
 
     .mdc-layout-grid {
         padding: 0;
-        margin: 0 60px;
+        margin: 0 60px 25px 60px;
     }
 
     h1 {
