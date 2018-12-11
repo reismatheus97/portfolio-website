@@ -10,164 +10,8 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" type="text/css">
 	<link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
-
 	<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-
-	<style type="text/css">
-
-		@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
-		
-		@media screen and (min-width: 840px) {
-			
-			.mdc-layout-grid {
-				padding: 0;
-				margin: 0 120px;
-			}
-
-		}
-
-		@media screen and (max-width: 839px) {
-			.mdc-drawer {
-				display: none !important;
-				position: fixed;
-			}
-
-			.mdc-layout-grid {
-				padding: 0;
-				margin: 0 60px;
-			}
-		}
-
-		body {
-			display: flex;
-			height: 100vh;
-			font-family: Roboto !important;
-			margin: 0;
-		}
-		
-		p {
-    	box-sizing: border-box;
-			padding: 20px;
-		}
-
-		h1, h2, h3, h4, h5, h6, .app-title, .app-content {
-			font-family: Roboto !important;
-			font-weight: 300 !important;
-		}
-
-		.mdc-drawer {
-			position: fixed;
-		}
-
-		.mdc-drawer-app-content {
-			flex: auto;
-			overflow: auto;
-		}
-
-		.main-content {
-			overflow: auto;
-			height: 100%;
-		}
-
-		.app-bar {
-			position: absolute;
-		}
-
-		.mdc-drawer__content {
-			overflow: hidden;
-		}
-
-		.mdc-list {
-			height: 100%;
-		}
-
-		.mdc-top-app-bar {
-			position: relative;
-		}
-
-		.mdc-layout-grid__cell {
-			text-align: center;
-		}
-
-		.mdc-layout-grid__inner {
-			padding: 10px 20px;
-		}
-
-		.mdc-card__actions {
-			justify-content: center;
-		}
-		
-		.mdc-card__media {
-			max-height: 320px;
-		}
-
-		.mdc-card__media-content {
-			padding: 5px;
-		}
-
-		.img-icon-custom {
-			width: 48px;
-			height: 48px;
-		}
-
-		.icons-container {
-			display: flex;
-			justify-content: space-evenly;
-			margin: 0 0 50px 0;
-		}
-
-		.custom-icon:hover {
-			opacity: 0.4;
-		}
-
-		.container {
-			width: 100%
-		}
-
-		.my-card {
-			height: auto;
-    	width: 100%;
-		}
-
-		.my-card-img {
-			width: 100%;
-			height: 100%;
-			max-width: 300px;
-			max-height: 300px;
-		}
-
-		.float-left {
-			float: left;
-		}
-
-		.float-right {
-			float: right;
-		}
-
-		.img-logo {
-			text-align: center;
-			width: 110px;
-		}
-
-		.logo-container {
-			width: 100%;
-			text-align: center;
-		}
-
-		.rotation { 
-			animation: spin 4s linear infinite;
-		}
-
-		.inner-drawer-icon {
-				display: inline-block;
-				vertical-align: text-top;
-		}
-
-		.container-about--content {
-			display: none;
-		}
-
-	</style>
+	<link rel="stylesheet" href="css/stylesheet.css" > 
 
 </head>
 
@@ -215,7 +59,7 @@
 	</aside>
 
 	<div class="container">
-		<header class="mdc-top-app-bar ">
+		<header id="app-bar" class="mdc-top-app-bar">
 				<div class="mdc-top-app-bar__row">
 					<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
 						<i href="#" class="material-icons mdc-top-app-bar__navigation-icon" id="navigation-icon">
@@ -228,126 +72,93 @@
 		<div id="home" class="container-home--content principal-content">
 				<div class="mdc-layout-grid">
 					<div class="mdc-layout-grid__inner">
-							<header class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+							<header class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 text-align-center">
 									<h1>Preferred Technologies</h1>
 							</header>
 							<div class="mdc-layout-grid__cell">
-									<div class="mdc-card my-card">
+									<section class="mdc-card my-card">
 										<div class="mdc-card__media mdc-card__media--square">
 											<div class="mdc-card__media-content">
 												<img class="my-card-img" src="img/icon-html.png" alt="HTML5">
 											</div>
 										</div>
 										<p>HTML Content</p>
-									</div>
+									</section>
 							</div>
 							<div class="mdc-layout-grid__cell">
-									<div class="mdc-card my-card">
+									<section class="mdc-card my-card">
 										<div class="mdc-card__media mdc-card__media--square">
 											<div class="mdc-card__media-content">
 												<img class="my-card-img" src="img/icon-css.png" alt="CSS">
 											</div>
 										</div>
 										<p>CSS Content</p>
-									</div>
+									</section>
 							</div>
 							<div class="mdc-layout-grid__cell">
-									<div class="mdc-card my-card">
+									<section class="mdc-card my-card">
 											<div class="mdc-card__media mdc-card__media--square">
 												<div class="mdc-card__media-content">
 													<img class="my-card-img" src="img/icon-js.png" alt="JavaScript">
 												</div>
 											</div>
 											<p>JS Content</p>
-										</div>
+										</section>
 							</div>
 							<div class="mdc-layout-grid__cell">
-									<div class="mdc-card my-card">
+									<section class="mdc-card my-card">
 										<div class="mdc-card__media mdc-card__media--square">
 											<div class="mdc-card__media-content">
 												<img class="my-card-img" src="img/icon-java.png" alt="Java">
 											</div>
 										</div>
 										<p>Java Content</p>
-									</div>
+									</section>
 							</div>
 							<div class="mdc-layout-grid__cell">
-									<div class="mdc-card my-card">
+									<section class="mdc-card my-card">
 										<div class="mdc-card__media mdc-card__media--square">
 											<div class="mdc-card__media-content">
 												<img class="my-card-img" src="img/icon-py.png" alt="Python">
 											</div>
 										</div>
 										<p>Python</p>
-									</div>
+									</section>
 							</div>
 							<div class="mdc-layout-grid__cell">
-									<div class="mdc-card my-card">
+									<section class="mdc-card my-card">
 										<div class="mdc-card__media mdc-card__media--square">
 											<div class="mdc-card__media-content">
 												<img class="my-card-img" src="img/icon-db.png" alt="Database">
 											</div>
 										</div>
 										<p>Database</p>
-									</div>
+									</section>
 							</div>
 					</div>
 				</div>
 		</div>
 		<div id="about" class="container-about--content principal-content">
-				<div>
-					<h3>aaaa bbbb</h3>
+			<div class="mdc-layout-grid">
+				<div class="mdc-layout-grid__inner">
+						<header class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+								<h1>About me</h1>
+						</header>
+						<article class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+							<p class="about-paragraph">
+								My name is Matheus Reis. I'm a 21 years old boy with a lot of enthusiasm to learn about technologies.
+								At the current moment, i'm in the last year of a Bachelor graduation in Computer Engineering and intern 
+								at a company named eFabrika BR since October 16th, 2017.
+								Since September 2018, i started doing Udacity's Full Stack Developer Nanodegree program. 
+								I thought that would be a great oportunity to learn and improve my skills.
+							</p> 
+						</article>
 				</div>
+			</div>
 		</div>
 	</div>
 
-	<script type="text/javascript">
-
-		// Deactivate all list items and activate the clicked item with its content.
-		selectFunc = (event) => {
-			let items = Array.from(document.getElementsByClassName("mdc-list-item"));
-			// Activate an route
-			items.map(it => it.classList.remove("mdc-list-item--activated"));
-			event.target.classList.add("mdc-list-item--activated");
-
-			// Turn route's content visible.
-			Array.from(document.getElementsByClassName("principal-content")).map(it => it.style.setProperty("display", "none"));
-			document.getElementById(event.target.hash.substr("2")).style.setProperty("display", "block");
-
-		}
-
-		// Control the selection of a route at the sidebar.
-		let list = Array.from(document.getElementsByClassName("mdc-list-item"));
-		list.map(it => it.addEventListener("click", selectFunc))
-
-		// Change drawer's visibility.
-		changeDrawerVisibility = () => {
-			const drawerStyleDisplay = getComputedStyle(document.getElementsByClassName("mdc-drawer")[0], null).display
-			let drawer = document.getElementsByClassName("mdc-drawer")[0];
-
-			drawerStyleDisplay === "none" ?
-				drawer.style.setProperty("display", "flex", "important") :
-				drawer.style.setProperty("display", "none", "important")
-
-		}
-
-		// Add opening event to the drawer.
-		document.getElementById("navigation-icon").addEventListener("click", changeDrawerVisibility);
-
-		// Add closing event to the drawer.
-	  document.getElementById("navigation-icon-close").addEventListener("click", changeDrawerVisibility);
-
-		handleRotation = (event) => {
-			let { classList } = event.target;
-			classList.contains("rotation") ?
-				classList.remove("rotation") :
-				classList.add("rotation");
-		}
-
-		let imgs = Array.from(document.getElementsByClassName("my-card-img"));
-		imgs.map(img => img.addEventListener("click", handleRotation))
-
-	</script>
+	<script type="text/javascript" src="js/script.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,154 @@
+
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+@media screen and (min-width: 840px) {
+    .mdc-layout-grid {
+        padding: 0;
+        margin: 0 120px;
+    }
+}
+
+@media screen and (max-width: 839px) {
+    .mdc-drawer {
+        display: none !important;
+        position: fixed;
+    }
+
+    .mdc-layout-grid {
+        padding: 0;
+        margin: 0 60px;
+    }
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    font-family: Roboto !important;
+    margin: 0;
+}
+
+p {
+box-sizing: border-box;
+    padding: 20px;
+}
+
+h1, h2, h3, h4, h5, h6, .app-title, .app-content {
+    font-family: Roboto !important;
+    font-weight: 300 !important;
+}
+
+.mdc-drawer {
+    position: fixed;
+}
+
+.mdc-drawer-app-content {
+    flex: auto;
+    overflow: auto;
+}
+
+.main-content {
+    overflow: auto;
+    height: 100%;
+}
+
+.app-bar {
+    position: absolute;
+}
+
+.mdc-drawer__content {
+    overflow: hidden;
+}
+
+.mdc-list {
+    height: 100%;
+}
+
+.mdc-top-app-bar {
+    position: relative;
+}
+
+.mdc-layout-grid__inner {
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.mdc-card__actions {
+    justify-content: center;
+}
+
+.mdc-card__media {
+    max-height: 320px;
+}
+
+.mdc-card__media-content {
+    padding: 5px;
+}
+
+.img-icon-custom {
+    width: 48px;
+    height: 48px;
+}
+
+.icons-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 0 50px 0;
+}
+
+.custom-icon:hover {
+    opacity: 0.4;
+}
+
+.container {
+    width: 100%;
+}
+
+.my-card {
+    height: auto;
+width: 100%;
+}
+
+.my-card-img {
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.img-logo {
+    text-align: center;
+    width: 110px;
+}
+
+.logo-container {
+    width: 100%;
+    text-align: center;
+}
+
+.rotation { 
+    animation: spin 4s linear infinite;
+}
+
+.inner-drawer-icon {
+    display: inline-block;
+    vertical-align: text-top;
+}
+
+.container-about--content {
+    display: none;
+}
+
+.about-paragraph {
+    padding: 0;
+    font-weight: 100;
+    text-align: justify;
+    font-size: 18px;
+}
