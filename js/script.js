@@ -53,7 +53,7 @@ document
     .getElementById("navigation-icon-close")
     .addEventListener("click", changeDrawerVisibility);
 
-// Handle images rotation.
+// Handle images' rotation.
 handleRotation = (event) => {
     let { classList } = event.target;
     classList.contains("rotation") ?
