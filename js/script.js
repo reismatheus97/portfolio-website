@@ -8,8 +8,8 @@ selectFunc = (event) => {
 
     // Turn content invisible.
     Array.from(document
-                            .getElementsByClassName("principal-content"))
-                            .map(it => it.style.setProperty("display", "none"));
+                    .getElementsByClassName("principal-content"))
+                    .map(it => it.style.setProperty("display", "none"));
     
     let routeName = event.target.hash.substr("2");
 
